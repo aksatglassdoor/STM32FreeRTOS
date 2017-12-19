@@ -1,5 +1,19 @@
 #include "stm32f4xx.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_rcc.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "stdio.h"
 
+void my_task(void* p)
+{
+	while(1)
+	{	
+		vTaskDelay(100);
+		printf("dsf");
+	}
+}
 
 int main(void)
 {
@@ -17,5 +31,9 @@ int main(void)
 
 	GPIO_Init(GPIOD, &GPIO_InitStruct);
 	GPIO_SetBits(GPIOD, GPIO_Pin_15);
+	
+	
+	xTaskCreate(my_task, "my_task", 512, NULL, 1, NULL);
+	vTaskStartScheduler();
 
 }
