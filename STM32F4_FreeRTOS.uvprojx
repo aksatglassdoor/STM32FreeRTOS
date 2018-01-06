@@ -332,7 +332,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\CMSIS;.\CMSIS\Include;.\CMSIS\Lib\ARM;.\CMSIS\Device\ST\STM32F4xx\Include;.\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm;.\STM32F4xx_StdPeriph_Driver;.\STM32F4xx_StdPeriph_Driver\inc;.\STM32F4xx_StdPeriph_Driver\src;.\FreeRTOS;.\FreeRTOS\Source\include;.\FreeRTOS\startup;.\FreeRTOS\Source\portable\RVDS\ARM_CM4F</IncludePath>
+              <IncludePath>.\CMSIS;.\CMSIS\Include;.\CMSIS\Lib\ARM;.\CMSIS\Device\ST\STM32F4xx\Include;.\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm;.\STM32F4xx_StdPeriph_Driver;.\STM32F4xx_StdPeriph_Driver\inc;.\STM32F4xx_StdPeriph_Driver\src;.\FreeRTOS;.\FreeRTOS\Source\include;.\FreeRTOS\startup;.\FreeRTOS\Source\portable\RVDS\ARM_CM4F;.\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -379,6 +379,16 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>fsmc_nand.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\fsmc_nand.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -429,6 +439,11 @@
               <FileName>stm32f4xx_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_fsmc.c</FilePath>
             </File>
           </Files>
         </Group>

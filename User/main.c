@@ -1,6 +1,13 @@
+//STM Peripheral Support Libraries
 #include "stm32f4xx.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
+
+//User Libraries
+#include "usart.h"
+#include "fsmc_nand.h"
+
+//User FreeRTOS Libraries
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
@@ -11,7 +18,7 @@ void my_task(void* p)
 	while(1)
 	{	
 		vTaskDelay(100);
-		printf("dsf");
+		GPIO_ToggleBits(GPIOD, GPIO_Pin_15);
 	}
 }
 
